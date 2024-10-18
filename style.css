@@ -1,6 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
 .attribution {
     font-size: 11px; text-align: center;
+    grid-area: att;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+body {
+    background-color: hsl(210, 46%, 95%);
+    display: grid;
+    grid-template-rows: 1fr 1fr .01fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "sec1 sec1 sec2 sec5"
+    "sec3 sec4 sec4 sec5"
+    "att att att att";
+    gap: 24px;
+    margin: 72px;
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        margin: 24px;
+    }
+}
+.sec1 {
+    background-color: hsl(263, 55%, 52%);
+    grid-area: sec1;
+}
+.sec2 {
+    background-color: hsl(217, 19%, 35%);
+    grid-area: sec2;
+}
+.sec3 {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: sec3;
+}
+.sec4 {
+    background-color: hsl(219, 29%, 14%);
+    grid-area: sec4;
+}
+.sec5 {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: sec5;
+}
+.sec1, .sec2, .sec3, .sec4, .sec5 {
+    border-radius: 10px;
+    padding: 24px;
+}
+.sec3 h1, .sec5 h1, .sec3 .span1, .sec5 .span1 {
+    color: hsl(217, 19%, 35%);
+}
+.sec3 .span2, .sec5 .span2 {
+    color: hsl(217, 19%, 35%);
+    opacity: 50%;
+}
+.sec3 main p, .sec5 main p {
+    color: hsl(217, 19%, 35%);
+    opacity: 70%;
+}
+.sec1 h1 {
+    z-index: 2;
+}
+section img {
+    border-radius: 50%;
+    width: 40px;
+}
+section .p {
+    display: inline-block;
+}
+section span {
+    display: block;
+}
+h1 {
+    color: hsl(0, 0%, 92%);
+}
+.span1 {
+    color: hsl(0, 0%, 81%);
+    font-size: 19px;
+}
+.span2 {
+    color: hsl(0, 0%, 81%);
+    opacity: 50%;
+}
+main p {
+    color: hsl(0, 0%, 81%);
+    opacity: 70%;
+}
+header {
+    margin-bottom: 24px;
+}
+div {
+    margin-bottom: 24px;
 }
